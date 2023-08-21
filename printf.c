@@ -18,27 +18,15 @@ int _printf(const char *format, ...)
 		if (*ch == '%')
 		{
 			ch++;
-			/*if (*ch == 'c')
-			{
+			if (*ch == 'c')
 				handle_char(args);
-				count++;
-			}
-			if (*ch == 's')
-			{
+			else if (*ch == 's')
 				handle_string(args);
-				count++;
-			}*/
-			if (*ch == '%')
-			{
+			else if (*ch == '%')
 				handle_percent();
-				count++;
-			}
-			/*else if (*ch == 'i' || *ch == 'd')
-			{
+			else if (*ch == 'i' || *ch == 'd')
 				handle_int(args);
-				count++;
-			}
-			*/
+			count++;
 		}
 		else
 		{
