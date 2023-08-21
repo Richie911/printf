@@ -23,7 +23,7 @@ int _printf(const char *format, ...)
 				handle_char(args);
 				count++;
 			}
-			else if (*ch == 's')
+			/*else if (*ch == 's')
 			{
 				handle_string(args);
 				count++;
@@ -38,8 +38,7 @@ int _printf(const char *format, ...)
 				handle_int(args);
 				count++;
 			}
-			else
-				count++;
+			*/
 		}
 		else
 		{
