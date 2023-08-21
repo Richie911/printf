@@ -23,7 +23,7 @@ int _printf(const char *format, ...)
 			if (*ch == 'c')
 				handle_char(args);
 			else if (*ch == 's')
-				handle_string(args);
+				count += handle_string(args);
 			else if (*ch == '%')
 				handle_percent();
 			else if (*ch == 'i' || *ch == 'd')
