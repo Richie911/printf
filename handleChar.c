@@ -9,6 +9,6 @@ void handle_char(va_list args)
 {
 	char character = va_arg(args, int);
 
-	if (character >= 0 || <= 255)
+	if (character >= 0)
 		write(1, &character, 1);
 }
