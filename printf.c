@@ -23,7 +23,7 @@ int _printf(const char *format, ...)
 				handle_char(args);
 				count++;
 			}
-			*/else if (*ch == 's')
+			*/if (*ch == 's')
 			{
 				handle_string(args);
 				count++;
