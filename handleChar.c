@@ -7,7 +7,7 @@
 
 void handle_char(va_list args)
 {
-	int character = va_arg(args, int);
+	char character = va_arg(args, int);
 
 	write(1, &character, 1);
 }
