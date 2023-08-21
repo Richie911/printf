@@ -12,6 +12,8 @@ int _printf(const char *format, ...)
 	int count = 0;
 	const char *ch;
 
+	if (format == NULL)
+		return (-1);
 	va_start(args, format);
 	for (ch = format; *ch != '\0'; ch++)
 	{
@@ -19,27 +21,14 @@ int _printf(const char *format, ...)
 		{
 			ch++;
 			if (*ch == 'c')
-			{
 				handle_char(args);
-				count++;
-			}
 			else if (*ch == 's')
-			{
 				handle_string(args);
-				count++;
-			}
 			else if (*ch == '%')
-			{
 				handle_percent();
-				count++;
-			}
 			else if (*ch == 'i' || *ch == 'd')
-			{
 				handle_int(args);
-				count++;
-			}
-			else
-				count++;
+			count++;
 		}
 		else
 		{
