@@ -38,6 +38,8 @@ int _printf(const char *format, ...)
 				handle_int(args);
 				count++;
 			}
+			else
+				count++;
 		}
 		else
 		{
