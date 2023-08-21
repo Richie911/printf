@@ -17,6 +17,6 @@ int handle_string(va_list args)
 		{
 			write(1, &str[i], 1);
 		}
-		return (i - 1);
 	}
+	return (i - 1);
 }
