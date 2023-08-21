@@ -23,17 +23,17 @@ int _printf(const char *format, ...)
 				handle_char(args);
 				count++;
 			}
-			*/if (*ch == 's')
+			if (*ch == 's')
 			{
 				handle_string(args);
 				count++;
-			}
-			/*else if (*ch == '%')
+			}*/
+			if (*ch == '%')
 			{
 				handle_percent();
 				count++;
 			}
-			else if (*ch == 'i' || *ch == 'd')
+			/*else if (*ch == 'i' || *ch == 'd')
 			{
 				handle_int(args);
 				count++;
