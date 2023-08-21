@@ -11,8 +11,11 @@ void handle_string(va_list args)
 	char *str = va_arg(args, char *);
 	int i;
 
-	for (i = 0; str[i] != '\0'; i++)
+	if (str != NULL)
 	{
-		write(1, &str[i], 1);
+		for (i = 0; str[i] != '\0'; i++)
+		{
+			write(1, &str[i], 1);
+		}
 	}
 }
