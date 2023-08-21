@@ -14,6 +14,7 @@ int handle_string(va_list args)
 	if (str == NULL)
 	{
 		char *null = "(null)";
+
 		for (i = 0; i < 6; i++)
 			write(1, &null[i], 1);
 	}
