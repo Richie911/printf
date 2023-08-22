@@ -29,7 +29,7 @@ int _printf(const char *format, ...)
 			else if (*ch == '%')
 				handle_percent();
 			else if (*ch == 'i' || *ch == 'd')
-				handle_int(args);
+				count += handle_int(args);
 			else
 			{
 				char c = '%';
