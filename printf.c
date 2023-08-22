@@ -28,6 +28,14 @@ int _printf(const char *format, ...)
 				handle_percent();
 			else if (*ch == 'i' || *ch == 'd')
 				handle_int(args);
+			else
+			{
+				char c = '%';
+
+				write(1, &c, 1);
+				write(1, ch, 1);
+				count++;
+			}
 			count++;
 		}
 		else
