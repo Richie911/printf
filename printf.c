@@ -38,6 +38,8 @@ int _printf(const char *format, ...)
 			}
 			count++;
 		}
+		else if (*ch == '%' && (*(ch + 1)) == '\0')
+			count = -1;
 		else
 		{
 			write(1, ch, 1);
