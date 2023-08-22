@@ -17,7 +17,7 @@ int _printf(const char *format, ...)
 	va_start(args, format);
 	for (ch = format; *ch != '\0'; ch++)
 	{
-		if (*ch == '%')
+		if (*ch == '%' * (ch + 1) != '\0')
 		{
 			ch++;
 			if (*ch == 'c')
@@ -28,6 +28,14 @@ int _printf(const char *format, ...)
 				handle_percent();
 			else if (*ch == 'i' || *ch == 'd')
 				handle_int(args);
+			else
+			{
+				char c = '%';
+
+				write(1, &c, 1);
+				write(1, ch, 1);
+				count++;
+			}
 			count++;
 		}
 		else
