@@ -3,10 +3,10 @@
 /**
  * handle_int - function that handls %i and %d
  * @args: list from printf
- * Return: void;
+ * Return: int;
  */
 
-void handle_int(va_list args)
+int handle_int(va_list args)
 {
 	int num = va_arg(args, int);
 	int length = snprintf(NULL, 0, "%d", num);
@@ -18,4 +18,5 @@ void handle_int(va_list args)
 		write(1, str, length);
 		free(str);
 	}
+	return (length - 1);
 }
